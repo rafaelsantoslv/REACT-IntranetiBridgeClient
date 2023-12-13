@@ -1,14 +1,13 @@
 import React from 'react'
-// import styledInputForm from './styles'
+import style from './styles.css'
 
-function InputForm({textInput, placeholderInput}) {
+function InputForm({textLabel, placeholder}) {
   return (
-    <styledInputForm>
-    <div className='input-box'>
-        <label for="firstname">{textInput}</label>
-        <input class="textbar" type="text" name="firstname" id="firstname" placeholder={placeholderInput} ></input>
-    </div>
-    </styledInputForm>
+      <div className='input-box'>
+          <label for="firstname">{textLabel}</label>
+          <input class="textbar" type="text" name="firstname" id="firstname" placeholder={placeholder} ></input>
+      </div>
+
   )
 }
 

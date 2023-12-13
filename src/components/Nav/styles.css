@@ -1,0 +1,28 @@
+
+.nav{
+  background-color: #222222;
+  height: 100px;
+  padding-inline: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: hidden;
+}
+
+.btn-logout{
+  background-color: transparent;
+  color: #c2c2c2;
+  border: none;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.btn-logout:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.btn-logout span{
+  padding-inline: 10px;
+}
+

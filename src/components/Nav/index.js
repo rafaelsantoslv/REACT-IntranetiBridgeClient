@@ -1,22 +1,20 @@
 import React from 'react'
 import logo from '../../assets/LogoIbridge.png'
-import StyledNav from './styles'
+import './styles.css'
 
 
 
 
 function Nav() {
   return (
-    <StyledNav>
-        <header>
           <nav className='nav'>
-            <a className='logo' href="#"><img src={logo} alt='Logo iBridge' /></a>
-            <ul className='nav-list'>
-              <li><a href='#'>Logout</a></li>
-            </ul>
+            <a className='logo' href="#">
+              <img src={logo} alt='Logo iBridge' />
+            </a>
+            <button className='btn-logout'>
+              <span>Sair</span> <i class="bi bi-box-arrow-right"></i>
+            </button>
           </nav>
-        </header>
-    </StyledNav>
   )
 }
 

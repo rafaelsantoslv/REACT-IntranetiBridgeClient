@@ -1,15 +1,15 @@
 import React from 'react'
-import GlobalStyle from './styles/global'
 import RoutesApp from './routes'
-
+import style from './styles/global.css'
+import Nav from '../src/components/Nav'
 
 
 const App = () => {
   return (
 
     <>
+    <Nav/>
     <RoutesApp />
-    <GlobalStyle />
     </>
   )
 }

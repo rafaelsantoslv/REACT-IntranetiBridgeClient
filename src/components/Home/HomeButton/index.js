@@ -1,17 +1,16 @@
 import React from 'react'
-import StyledButton from './styles'
-
+import './styles.css'
 
 function ButtonHome({iconClass, textButton}) {
   return (
-    <StyledButton>
-        <button>
-              <a href='Empregado'>
-              <i className={iconClass}></i><br />
-              {textButton}
-              </a>
-            </button>
-    </StyledButton>
+    
+        
+    <a href='funcionario'>
+      {textButton}
+      <i className={iconClass}></i>
+    </a>
+        
+    
   )
 }
 

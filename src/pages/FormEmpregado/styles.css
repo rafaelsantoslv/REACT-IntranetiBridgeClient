@@ -1,0 +1,36 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+
+.container{
+    max-width: 1200px;
+    display: flex;
+    background-color: transparent;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 25px;
+    box-shadow: 1px 1px 6px #0000003c;
+    border-radius: 25px;
+
+}
+
+.form{
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    background-color: transparent;
+    margin: auto;
+    padding: 5px;
+}
