@@ -9,8 +9,8 @@ function FormComplemento() {
             <h3>Complemento</h3>
         </div>
         <div className='input-group'>
-            <InputForm placeholder={'Digite o Nome do Pai'} textLabel={'Nome do Pai'}/>
-            <InputForm placeholder={'Digite o Nome da Mãe'} textLabel={'Nome da Mãe'}/>            
+            <InputForm type={'text'} placeholder={'Digite o Nome do Pai'} textLabel={'Nome do Pai'}/>
+            <InputForm type={'text'} placeholder={'Digite o Nome da Mãe'} textLabel={'Nome da Mãe'}/>            
         </div>
     </div>
   )

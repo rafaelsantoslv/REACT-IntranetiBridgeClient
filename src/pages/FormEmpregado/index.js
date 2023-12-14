@@ -6,9 +6,10 @@ import FormComplemento from '../../components/Form/FormComplemento';
 import style from './styles.css'
 import FormSecaoTrabalhista from '../../components/Form/FormSecaoTrabalhista';
 import FormEmpresa from '../../components/Form/FormEmpresa';
+import FormRadio from '../../components/Form/FormRadio';
 function FormEmpregado() {
-    return (
-      <div className='FormEmpregado'>
+  return (
+    <div className='FormEmpregado'>
         <div className='container'>
           <div className='form'>
           <div className='title'>
@@ -22,6 +23,8 @@ function FormEmpregado() {
           <FormComplemento/>   
           <FormSecaoTrabalhista/>  
           <FormEmpresa/>
+          <FormRadio/>
+          
           </div>
         </div>
       </div>

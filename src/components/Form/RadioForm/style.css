@@ -1,0 +1,10 @@
+.gender-input{
+    margin-inline: 15px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 10px;
+}
+
+label {
+    padding-right: 3px;
+}
