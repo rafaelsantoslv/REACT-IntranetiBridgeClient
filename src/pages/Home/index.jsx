@@ -1,13 +1,18 @@
-import React from 'react'
-import ButtonHome from '../../components/Home/HomeButton'
-import Nav from '../../components/Nav'
-import style from './styles.css'
+import React from 'react';
+import {
+  MainHome,
+  ContainerHome
+} from './styles';
+import ButtonHome from './HomeButton';
+import Nav from '../../components/Nav';
+
 
 const Home = () => {
   return (
-    <div className='Home'>
-        {/* <Nav /> */}
-        <div className='container'>
+    <>
+    <MainHome>
+        <Nav />
+          <ContainerHome>
             <ButtonHome iconClass={'bi bi-person-add'} textButton={'Cadastrar Funcionário'} />
             <ButtonHome iconClass={'bi bi-building-add'} textButton={'Cadastrar Empresa'}/>
             <ButtonHome iconClass={'bi bi-building-fill'} textButton={'Gerenciar Empresa'}/>
@@ -18,8 +23,9 @@ const Home = () => {
             <ButtonHome iconClass={'bi bi-gear'} textButton={'Gerenciar Configurações'}/>
             <ButtonHome iconClass={'bi bi-gear'} textButton={'Gerenciar Configurações'}/>
             <ButtonHome iconClass={'bi bi-gear'} textButton={'Gerenciar Configurações'}/>
-        </div>
-    </div>
+          </ContainerHome>
+    </MainHome>
+    </>
   )
 }
 

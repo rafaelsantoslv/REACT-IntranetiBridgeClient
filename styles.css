@@ -1,15 +1,15 @@
 
-.Home {
+.main {
     background-color: #303030;
     width: 100vw;
     height: 100vh;
     font-family: 'Nunito', sans-serif;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 
 }
 
 
-.container{
+.containerHome{
     background-color: transparent;
     width: 100%;
     padding: 25px;
