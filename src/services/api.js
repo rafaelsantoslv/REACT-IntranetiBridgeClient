@@ -1,11 +1,8 @@
-import { default as axios } from "axios";
+import  axios from "axios";
 ;
 const api = axios.create({
-    baseURL: "http://localhost:3333/",
-    headers: {
-        Authorization: `jwt ${localStorage.getItem('token')}`
-    }
-
+    baseURL: "http://localhost:5001/",
+    headers: {'Content-Type': 'application/json'}
 })
 
 

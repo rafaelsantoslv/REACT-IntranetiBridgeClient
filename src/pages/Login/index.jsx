@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   ContainerLogin,
   Panel,
@@ -20,18 +20,26 @@ import {
 } from './style'; // Replace with the actual file path
 import api from '../../services/api'
 import logo from '../../assets/LogoIbridge2.png';
+import { AuthContext } from "../../context/auth"
+import { Navigate } from 'react-router-dom';
 
 function Login() {
 
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const [token, setToken] = useState('')
+  const { signIn, signed } = useContext(AuthContext)
 
-
-  const handleLogin = () => {
-    api.post('/api/v1/auth', {
-      email, senha
-    })
+  const handleSignIn = async (e) => {
+    e.preventDefault(); 
+    const data = {
+      'email': email,
+      'senha': senha
+    };
+    console.log(data)
+    await signIn(data)
+  }
+  if(signed) {
+    return <Navigate to="/home" />
   }
 
   return (
@@ -45,7 +53,7 @@ function Login() {
         <Inputs>
           <Span>Área de Login</Span>
           <Input>
-            <InputField className="input-panel" type="text" value={user} onChange={(e) => { setEmail(e.target.value)}} placeholder="Login" />
+            <InputField className="input-panel" type="text" value={email}  onChange={(e) => { setEmail(e.target.value)}} placeholder="Login" />
             <SpanField>
             <i className="bi bi-envelope" />
             </SpanField>
@@ -58,7 +66,7 @@ function Login() {
             </SpanField>
           </Input>
           <ButtonPanel>
-            <Button className="button-form">Entrar</Button>
+            <Button className="button-form" type='submit' onClick={handleSignIn}>Entrar</Button>
           </ButtonPanel>
           <TextPanel>
             <TextSpan>Esqueci</TextSpan>
