@@ -18,7 +18,7 @@ import {
   SpanField,
   SpanShadow
 } from './style'; // Replace with the actual file path
-import api from '../../services/api'
+// import api from '../../services/api'
 import logo from '../../assets/LogoIbridge2.png';
 import { AuthContext } from "../../context/auth"
 import { Navigate } from 'react-router-dom';
@@ -35,7 +35,6 @@ function Login() {
       'email': email,
       'senha': senha
     };
-    console.log(data)
     await signIn(data)
   }
   if(signed) {

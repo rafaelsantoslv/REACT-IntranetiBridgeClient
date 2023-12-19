@@ -1,32 +1,29 @@
-import { Fragment } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from '../pages/Login'
+import { PrivateRoute } from "./PrivateRoutes";
 import Home from "../pages/Home";
-import Login from "../pages/Login";
-// import FormEmpregado from "../pages/FormEmpregado";
-
-const Private = ({ item: Item }) => {
-    const signed = true;
-
-    return signed ? <Item /> : <Login />;
-};
+import FormEmpregado from "../pages/Home";
 
 const RoutesApp = () => {
+
+
+   
+
     return (
-        // <BrowserRouter>
-        //     <Routes>
-        //         <Route path="/" element={<Private item={Home} />} />
-        //         <Route path="login" element={<Login />} />
-        //         <Route path="/funcionario" element={<FormEmpregado />} />
-        //         <Route path="*" element={<Login />} />
-        //     </Routes>
-        // </BrowserRouter>
 
         <Router>
-            <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/home" element={<Home />} />
-            </Routes>
-        </Router>
+        <Routes>
+            <Route path="/" element={<Login />}/>
+            <Route path="*" element={<Login />}/>
+            <Route path="/teste" element={<Home />}/>
+            <Route path="/home" element={<PrivateRoute />}>
+                <Route path="/home" element={<Home />} /> 
+            </Route>
+            <Route path="/funcionario" element={<PrivateRoute />}>
+                <Route path="/funcionario" element={<FormEmpregado />} /> 
+            </Route>
+        </Routes>
+    </Router>
 
     );
 };
