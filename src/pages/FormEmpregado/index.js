@@ -8,7 +8,7 @@ import style from './styles.css'
 import FormSecaoTrabalhista from '../../components/Form/FormSecaoTrabalhista';
 import FormEmpresa from '../../components/Form/FormEmpresa';
 import FormRadio from '../../components/Form/FormRadio';
-import ButtonHome from '../../components/Home/HomeButton';
+import ButtonHome from './HomeButton';
 
 function FormEmpregado() {
   
@@ -33,8 +33,8 @@ function FormEmpregado() {
           <FormEmpresa/>
           <FormRadio/>
           {/* <ButtonHome iconClass={'bi bi-send'}/> */}
-          <div className='buttonClass2'>
-            <a className='buttonLink2' href='funcionario'>
+          <div className='buttonClass'>
+            <a className='buttonLink' href='funcionario'>
               Enviar
             <i className='bi bi-send'></i>
             </a>
